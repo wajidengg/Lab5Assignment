@@ -27,34 +27,14 @@ public class NewFXMain extends Application {
     
     @Override
     public void start(Stage primaryStage) throws IOException {
-        /* Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
         
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        
-        Scene scene = new Scene(root, 300, 250);
-        
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-        */
         stg = primaryStage;
         primaryStage.setResizable(false);
         Parent root = FXMLLoader.load(getClass().getResource("FXMLmain.fxml"));
         primaryStage.setTitle("Basic Form");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
-        // this.primaryStage = primaryStage;
-        // this.primaryStage.setTitle("Client Form");
-        // showMainView();
+        
     }
     
     public void changeScene(String fxml) throws IOException {
@@ -62,16 +42,7 @@ public class NewFXMain extends Application {
         stg.getScene().setRoot(pane);
     
     }
-/*
-    private void showMainView() throws IOException{
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("MainView.fxml"));
-        mainLayout = loader.load();
-        Scene scene = new Scene(mainLayout);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-        
-    }*/
+
     /**
      * @param args the command line arguments
      */
